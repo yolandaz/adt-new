@@ -1,0 +1,63 @@
+// set up youtube player
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        width: '1920',
+        height: '1080',
+        playerVars: {
+            listType: 'playlist',
+            list: 'PLW0xC9CIbqVP4bl9NUF3w33uOzpmW8ieP',
+            autoplay: 1,
+            controls: 0,
+            disablekb: 1,
+            loop: 1,
+            showinfo: 0
+        },
+        events: {
+            onReady: onPlayerReady
+        }
+    });
+}
+
+function toggleMute() {
+    $("#mute").removeClass("icon-volume-mute icon-volume-mute2");
+    if (player.isMuted()) {
+        player.unMute();
+        $("#mute").addClass("icon-volume-mute");
+    } else {
+        player.mute();
+        $("#mute").addClass("icon-volume-mute2");
+    }
+}
+
+function onPlayerReady(event) {
+    player.mute();
+    console.log(player.getVideoUrl());
+    $("#watch").attr("href", player.getVideoUrl());
+    $("#mute").click(toggleMute);
+    // make youtube player correct size
+    $(window).on("resize", function () {
+        var $player = $("#player");
+        var windowWidth = $(window).width();
+        var windowHeight = $(window).height();
+        if (windowWidth / windowHeight > 16 / 9) {
+            $player.width(windowWidth);
+            var playerHeight = 9 * windowWidth / 16;
+            $player.height(playerHeight);
+            var marginTop = (windowHeight - playerHeight) / 2;
+            $player.css('margin-left', 0);
+            $player.css('margin-top', marginTop+'px');
+        } else {
+            var playerWidth = 16 * windowHeight / 9;
+            $player.width(playerWidth);
+            $player.height(windowHeight);
+            var marginLeft = (windowWidth - playerWidth) / 2;
+            $player.css('margin-top', 0);
+            $player.css('margin-left', marginLeft+'px');
+        }
+    }).resize();
+}

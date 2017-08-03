@@ -1,0 +1,136 @@
+/* =============================================================================
+   INTRO SECTION
+   ========================================================================== */
+
+body {
+    z-index: -2;
+    background-color: #000;
+}
+
+/* =============================================================================
+   INTRO SECTION
+   ========================================================================== */
+
+#intro-section {
+    position: relative;
+}
+
+.player-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#player {
+    position: fixed;
+    z-index: -1;
+}
+
+#player-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: radial-gradient(ellipse 110% 100% at 50% 15%, rgba(0,0,0,0.50) 20%, rgba(0,0,0,0.55) 35%, #000 90%);
+}
+
+/* INTRO CONTROL PANEL */
+.intro-panel {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background: rgba(0,0,0,0.20);
+    border: 1px solid rgba(255,255,255,0.50);
+    border-radius: 2px;
+    color:white;
+}
+
+.panel-section {
+    display: inline-block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.panel-section {
+    border-right: 1px solid rgba(255,255,255,0.50);
+}
+.panel-section:last-child {
+    border-right: 0;
+}
+
+.panel-section span {
+    padding: 12px 15px;
+    opacity: 0.75;
+}
+
+.panel-section span:hover {
+    opacity: 1;
+}
+
+.panel-section a {
+    font-weight: 300;
+    letter-spacing: 1.78px;
+    
+    text-transform: uppercase;
+}
+
+/* MIT ASIAN DANCE TEAM */
+#intro-section h1 {
+    font-family: Oswald, Helvetica, arial, sans-serif;
+    font-size: 77px;
+    color: #FFFFFF;
+    line-height: 85px;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: absolute;
+    top: 110px;
+    right: 50px;
+    text-align: right;
+}
+
+/* =============================================================================
+   SECTION FORMATTING
+   ========================================================================== */
+
+section:not(#intro-section) {
+    color:white;
+    width: 100%;
+    text-align:center;
+    color: white;
+    padding-top:90px;
+    padding-bottom:50px;
+}
+
+.section-container {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.section-title {
+    display: inline-block;
+    font-size:54px;
+    margin-bottom: 40px;
+    text-transform:uppercase;
+    letter-spacing: 5px;
+    font-family: Oswald, Helvetica, arial, sans-serif;
+    font-weight: 500;
+}
+
+section p {
+    text-align: left;
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.35em;
+}
+
+/* =============================================================================
+   ABOUT SECTION
+   ========================================================================== */
+
+#about-section {
+    background-color: #000;
+}
+
