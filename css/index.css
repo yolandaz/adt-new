@@ -1,10 +1,16 @@
 /* =============================================================================
-   INTRO SECTION
+   GENERAL
    ========================================================================== */
 
 body {
     z-index: -2;
     background-color: #000;
+}
+
+a {
+    color: #009bff;
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 /* =============================================================================
@@ -13,6 +19,12 @@ body {
 
 #intro-section {
     position: relative;
+}
+
+.hide-load {
+    opacity: 0;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
 }
 
 .player-container {
@@ -44,7 +56,15 @@ body {
     background: rgba(0,0,0,0.20);
     border: 1px solid rgba(255,255,255,0.50);
     border-radius: 2px;
-    color:white;
+}
+
+.intro-panel span {
+    color:white;   
+    font-weight: 400;
+}
+
+.intro-panel a {
+    text-decoration: none;
 }
 
 .panel-section {
@@ -101,6 +121,7 @@ section:not(#intro-section) {
     color: white;
     padding-top:90px;
     padding-bottom:50px;
+    background-color: #000;
 }
 
 .section-container {
@@ -126,11 +147,30 @@ section p {
     line-height: 1.35em;
 }
 
-/* =============================================================================
-   ABOUT SECTION
-   ========================================================================== */
-
-#about-section {
-    background-color: #000;
+.section-image {
+    background-size: contain;
+    height: 0;
+    background-repeat: no-repeat; 
 }
 
+/* =============================================================================
+   REST OF THE CONTENT
+   ========================================================================== */
+
+#bathing-image {
+    background-image: linear-gradient(-180deg, #000000 0%, rgba(0,0,0,0.50) 30%, rgba(0,0,0,0.50) 65%, #000000 100%), url('../assets/bathing.jpg');
+    padding-top: 58.936%; /* workaround (img-height / img-width * container-width) = (1207 / 2048 * 100) */
+    margin-top: -350px;
+}
+
+#mly-image {
+    background-image: linear-gradient(-180deg, #000000 0%, rgba(0,0,0,0.50) 30%, rgba(0,0,0,0.50) 65%, #000000 100%), url('../assets/mly.jpg');
+    padding-top: 59.94%; /* workaround (img-height / img-width * container-width) = (1019 / 1700 * 100) */
+    margin-top: -280px;
+}
+
+#endless-image {
+    background-image: linear-gradient(-180deg, #000000 0%, rgba(0,0,0,0.30) 15%), url('../assets/endless.jpg');
+    padding-top: 66.748%; /* workaround (img-height / img-width * container-width) = (1367 / 2048 * 100) */
+    margin-top: -100px;
+}

@@ -15,10 +15,12 @@ function onYouTubeIframeAPIReady() {
             controls: 0,
             disablekb: 1,
             loop: 1,
-            showinfo: 0
+            showinfo: 0,
+            rel: 0
         },
         events: {
-            onReady: onPlayerReady
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange
         }
     });
 }
@@ -34,11 +36,19 @@ function toggleMute() {
     }
 }
 
+function onPlayerStateChange(event) {
+    // hide text until player loads
+    if (event.data == YT.PlayerState.PLAYING) {
+        $(".hide-load").css("opacity", 1);
+    }
+}
+
 function onPlayerReady(event) {
+    // mute player, set watch link, set mute toggle
     player.mute();
-    console.log(player.getVideoUrl());
     $("#watch").attr("href", player.getVideoUrl());
     $("#mute").click(toggleMute);
+
     // make youtube player correct size
     $(window).on("resize", function () {
         var $player = $("#player");
