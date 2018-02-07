@@ -19,3 +19,87 @@ html {
 body {
   font-family:'Source Sans Pro', Helvetica, Arial, sans-serif;  
 }
+
+/* =============================================================================
+   GENERAL
+   ========================================================================== */
+
+body {
+    z-index: -2;
+    background-color: #000;
+}
+
+a {
+    color: #009bff;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* =============================================================================
+   SECTION FORMATTING
+   ========================================================================== */
+
+section:not(#intro-section) {
+    color:white;
+    width: 100%;
+    text-align:center;
+    color: white;
+    padding-top:90px;
+    padding-bottom:50px;
+    background-color: #000;
+}
+
+.section-container {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.section-title {
+    display: inline-block;
+    font-size:54px;
+    margin-bottom: 40px;
+    text-transform:uppercase;
+    letter-spacing: 5px;
+    font-family: Oswald, Helvetica, arial, sans-serif;
+    font-weight: 500;
+}
+
+section p {
+    text-align: left;
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.35em;
+}
+
+.section-image {
+    background-size: contain;
+    height: 0;
+    background-repeat: no-repeat; 
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) {
+  .section-container {
+      width: 500px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+  section:not(#intro-section) {
+      padding-top:30px;
+      padding-bottom:50px;
+  }
+  .section-container {
+      width: 290px;
+  }
+  .section-title {
+      font-size:45px;
+      margin-bottom: 30px;
+  }
+  section p {
+      margin-bottom: 20px;
+      font-size: 18px;
+  }
+}
