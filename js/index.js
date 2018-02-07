@@ -54,7 +54,7 @@ function onPlayerStateChange(event) {
     // hide text until player loads
     if (event.data == YT.PlayerState.PLAYING) {
         $(".show-load").css("opacity", 0);
-        $(".hide-load").css("opacity", 1);
+        $(".hide-load").removeClass("hide-load");
     }
 }
 
