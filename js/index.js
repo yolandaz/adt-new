@@ -17,7 +17,9 @@ function onYouTubeIframeAPIReady() {
             disablekb: 1,
             loop: 1,
             showinfo: 0,
-            rel: 0
+            rel: 0, 
+            iv_load_policy: 3,
+            start: 3
         },
         events: {
             onReady: onPlayerReady,
@@ -51,10 +53,13 @@ function togglePause() {
 }
 
 function onPlayerStateChange(event) {
-    // hide text until player loads
+    // hide text until player loads + 2 seconds
     if (event.data == YT.PlayerState.PLAYING) {
-        $(".show-load").css("opacity", 0);
-        $(".hide-load").removeClass("hide-load");
+        setTimeout(function (){
+            $(".show-load").css("opacity", 0);
+            $(".hide-load").removeClass("hide-load");
+            $(".loader").css("display", "none");
+        }, 3000);
     }
 }
 

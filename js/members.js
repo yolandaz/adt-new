@@ -187,7 +187,7 @@ var choreographers = [
         "title": "She's My Stigma",
         "name": "Priscilla Wong",
         "year": "Class of 2020",
-        "fun": "",
+        "fun": "Has that basic aesthetic, loves gummy snacks, and drinks way too much aloe. Favorite KFT order: honey milk green tea, less sugar, little ice. Favorite dancer: Junho Lee (check him out!)",
         "image": "priscilla"
     }, {
         "title": "Spear Me The Puns",
@@ -199,7 +199,7 @@ var choreographers = [
         "title": "Beauties in the Rain",
         "name": "Doris Fu",
         "year": "Class of 2021",
-        "fun": "",
+        "fun": "meet me at the barre",
         "image": "doris"
     }, {
         "title": "Blossom",
