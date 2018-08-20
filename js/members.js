@@ -51,7 +51,7 @@ var exec = [
         "title": "Technical Director",
         "name": "Meryl Wang",
         "year": "Class of 2020",
-        "fun": "",
+        "fun": "I enjoy boba, coffee, dancing in Adidas pants, and friends. And shhhh but secretly my sole motivation to dance is one hour of uninterrupted BTS.",
         "image": "meryl"
     }, {
         "title": "Cover Coordinator",
@@ -145,13 +145,13 @@ var choreographers = [
         "title": "Mommae Triangle",
         "name": "Upa Adhikari",
         "year": "Class of 2019",
-        "fun": "",
+        "fun": "upa be my oppa",
         "image": "upa"
     }, {
         "title": "Mommae Triangle",
         "name": "Ara Adhikari",
         "year": "Class of 2019",
-        "fun": "",
+        "fun": "bobaaaaa??",
         "image": "ara"
     }, {
         "title": "Gorilla",
@@ -211,13 +211,13 @@ var choreographers = [
         "title": "Harvest",
         "name": "Jenn Wang",
         "year": "Class of 2021",
-        "fun": "",
+        "fun": "i enjoy dumplings",
         "image": "jenn"
     }, {
         "title": "Weekly Workshops",
         "name": "Tracy Cheng",
         "year": "Class of 2017",
-        "fun": "",
+        "fun": "also goes by awktopus",
         "image": "tracy"
     }, {
         "title": "Weekly Workshops",

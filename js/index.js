@@ -75,19 +75,23 @@ function onPlayerReady(event) {
         var $player = $("#player");
         var windowWidth = $(window).width();
         var windowHeight = $(window).height();
-        if (windowWidth / windowHeight > 16 / 9) {
+        var ratio = 1280.0 / 580;
+        var vidRatio = 16.0 / 9;
+        var hAdjust = 720.0 / 580;
+        if (windowWidth / windowHeight > ratio) { // too wide
             $player.width(windowWidth);
-            var playerHeight = 9 * windowWidth / 16;
+            var playerHeight = windowWidth / vidRatio;
             $player.height(playerHeight);
             var marginTop = (windowHeight - playerHeight) / 2;
             $player.css('margin-left', 0);
             $player.css('margin-top', marginTop+'px');
-        } else {
-            var playerWidth = 16 * windowHeight / 9;
+        } else { // too tall
+            var playerHeight = windowHeight * hAdjust;
+            var playerWidth = ratio * playerHeight;
+            $player.height(playerHeight);
             $player.width(playerWidth);
-            $player.height(windowHeight);
             var marginLeft = (windowWidth - playerWidth) / 2;
-            $player.css('margin-top', 0);
+            $player.css('margin-top', -(720.0 - 580) / 2 * hAdjust);
             $player.css('margin-left', marginLeft+'px');
         }
     }).resize();
